@@ -39,4 +39,8 @@
 });*/
 $router->get('/autores','AutorController@getAll');
 
-$router->get('/autores/new','AutorController@create');
+$router->post('/autores/new','AutorController@create');
+
+$router->delete('/autores/{id}','AutorController@destroy');
+
+$router->get('/autores/{id}','AutorController@getById');
