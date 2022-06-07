@@ -13,27 +13,30 @@
 |
 */
 
-$router->get('/', ['uses'=> 'BootcampController@home','as'=>'inicio']);
+//$router->get('/', ['uses'=> 'BootcampController@home','as'=>'inicio']);
 
-$router->group(['prefix'=> 'bootcamp'],function()use($router){
+/*$router->group(['prefix'=> 'bootcamp'],function()use($router){
     $router->get('/info',function(){
         return "Información sobre el bootamp";
     });
 
-});
+});*/
 
-$router->get('/bootcamp',['uses'=>'BootcampController@boot','as'=>'inicio']);
+//$router->get('/bootcamp',['uses'=>'BootcampController@boot','as'=>'inicio']);
 
-$router->group(['prefix'=> 'bootcamp'],function()use($router){
+/*$router->group(['prefix'=> 'bootcamp'],function()use($router){
     $router->get('/cursos',function(){
         return "Información sobre los cursos del bootcamp";
     });
 
-});
+});*/
 
-$router->group(['prefix'=> 'bootcamp'],function()use($router){
+/*$router->group(['prefix'=> 'bootcamp'],function()use($router){
     $router->get('/equipo',function(){
         return "Información sobre nuestro equipo de trabajo";
     });
 
-});
+});*/
+$router->get('/autores','AutorController@getAll');
+
+$router->get('/autores/new','AutorController@create');
